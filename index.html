@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ANIE Moundou - Agence Nationale des Investissements et des Exportations</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    line-height:1.6;
+    color:#333;
+}
+
+header{
+    background:#003366;
+    color:white;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 0;
+}
+
+.logo img {
+    height: 70px;
+    width: auto;
+}
+.nav-links{
+    list-style:none;
+    display:flex;
+}
+
+.nav-links li{
+    margin-left:25px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.nav-links a:hover{
+    color:#4CAF50;
+}
+
+.hero{
+    background:linear-gradient(rgba(0,51,102,0.8), rgba(0,51,102,0.8)),
+    url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1500&q=80');
+    background-size:cover;
+    background-position:center;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero-content h1{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    background:#4CAF50;
+    color:white;
+    padding:12px 25px;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+.btn:hover{
+    background:#388E3C;
+}
+
+section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    color:#003366;
+    margin-bottom:40px;
+    font-size:36px;
+}
+
+.about p{
+    text-align:center;
+    max-width:900px;
+    margin:auto;
+}
+
+.services{
+    background:#f5f5f5;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.service{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.service h3{
+    color:#003366;
+    margin-bottom:10px;
+}
+
+.opportunities ul{
+    max-width:700px;
+    margin:auto;
+    font-size:18px;
+}
+
+.opportunities li{
+    margin-bottom:15px;
+}
+
+.contact{
+    background:#003366;
+    color:white;
+    text-align:center;
+}
+
+.contact p{
+    margin-bottom:15px;
+}
+
+footer{
+    background:#001f3f;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.menu-toggle{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+@media(max-width:768px){
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .nav-links{
+        display:none;
+        flex-direction:column;
+        width:100%;
+        background:#003366;
+        position:absolute;
+        top:70px;
+        left:0;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .nav-links li{
+        margin:15px 0;
+        text-align:center;
+    }
+
+    .hero-content h1{
+        font-size:35px;
+    }
+
+    .hero-content p{
+        font-size:18px;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+            <div class="logo">
+    <img src="image/logo-anie.png" alt="ANIE">
+</div>
+
+            <div class="menu-toggle" id="menu-toggle">
+                ☰
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#opportunites">Opportunités</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero" id="accueil">
+    <div class="hero-content">
+        <h1>ANIE MOUNDOU</h1>
+        <p>
+            Agence Nationale des Investissements et des Exportations
+        </p>
+
+        <p>
+            Investir aujourd'hui pour construire le Tchad de demain.
+        </p>
+
+        <a href="#services" class="btn">
+            Découvrir nos services
+        </a>
+    </div>
+</section>
+
+<section class="about" id="apropos">
+    <div class="container">
+        <h2 class="section-title">À Propos</h2>
+
+        <p>
+            L'Agence Nationale des Investissements et des Exportations
+            (ANIE) est une institution publique chargée de promouvoir
+            les investissements, l'entrepreneuriat et les exportations
+            au Tchad.
+            Elle accompagne les investisseurs, facilite les démarches
+            administratives et soutient le développement des secteurs
+            stratégiques de l'économie nationale.
+        </p>
+    </div>
+</section>
+
+<section class="services" id="services">
+    <div class="container">
+
+        <h2 class="section-title">Nos Services</h2>
+
+        <div class="service-grid">
+
+            <div class="service">
+                <h3>Guichet Unique</h3>
+                <p>
+                    Centralisation et simplification des démarches
+                    administratives des entreprises.
+                </p>
+            </div>
+
+            <div class="service">
+                <h3>Promotion des Investissements</h3>
+                <p>
+                    Accompagnement des investisseurs nationaux et
+                    internationaux.
+                </p>
+            </div>
+
+            <div class="service">
+                <h3>Facilitation des Exportations</h3>
+                <p>
+                    Soutien aux entreprises tchadiennes pour accéder
+                    aux marchés internationaux.
+                </p>
+            </div>
+
+            <div class="service">
+                <h3>Appui aux PME/PMI</h3>
+                <p>
+                    Conseils techniques et accompagnement des porteurs
+                    de projets.
+                </p>
+            </div>
+
+            <div class="service">
+                <h3>Agriculture & Agro-industrie</h3>
+                <p>
+                    Développement des filières agricoles et
+                    agroalimentaires.
+                </p>
+            </div>
+
+            <div class="service">
+                <h3>Numérique & Innovation</h3>
+                <p>
+                    Promotion des projets technologiques et
+                    innovants.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="opportunities" id="opportunites">
+    <div class="container">
+
+        <h2 class="section-title">
+            Opportunités d'Investissement
+        </h2>
+
+        <ul>
+            <li>✔ Agriculture et Élevage</li>
+            <li>✔ Agro-industrie</li>
+            <li>✔ Mines et Ressources Naturelles</li>
+            <li>✔ Économie Numérique</li>
+            <li>✔ Tourisme et Hôtellerie</li>
+            <li>✔ Énergies Renouvelables</li>
+        </ul>
+
+    </div>
+</section>
+
+<section class="contact" id="contact">
+
+    <div class="container">
+
+        <h2 class="section-title" style="color:white;">
+            Contact
+        </h2>
+
+        <p><strong>ANIE - Moundou</strong></p>
+
+        <p>📍 Moundou, Tchad</p>
+
+        <p>📞 +235 66 29 62 39</p>
+
+        <p>✉ contact@anie.td</p>
+
+        <form style="max-width:600px;margin:auto;">
+            <input type="text" placeholder="Votre nom"
+                style="width:100%;padding:12px;margin-bottom:10px;border:none;border-radius:5px;">
+
+            <input type="email" placeholder="Votre email"
+                style="width:100%;padding:12px;margin-bottom:10px;border:none;border-radius:5px;">
+
+            <textarea placeholder="Votre message"
+                style="width:100%;padding:12px;height:120px;border:none;border-radius:5px;"></textarea>
+
+            <br><br>
+
+            <button type="submit" class="btn">
+                Envoyer
+            </button>
+        </form>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>
+        © 2026 ANIE Moundou - Tous droits réservés.
+    </p>
+</footer>
+
+<script>
+
+const toggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
+toggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+    });
+});
+
+</script>
+
+</body>
+</html>
